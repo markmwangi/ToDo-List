@@ -11,7 +11,7 @@ body, html{
 .container{
     background: navajowhite;
     padding: 5px;
-    border: 1px solid #42464b;
+    border: 1px solid rgba(255, 240, 200);
     border-radius: 6px;
     margin: 20px auto 0;
     width: 50%;
@@ -25,10 +25,17 @@ body, html{
 
 .items{
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
     display: block;
     border-bottom: #42464b solid 1px;
 }
 
 #add-btn{
-    background: rgba(189 , 173, 255, 1);
+    background: rgba(189 , 173, 255, .25);
+    /* border: 1px solid rgba(189, 190, 255, .5); */
+    font-size: 15px;
+}
+
+input:focus button:focus{
+    outline: none;
 }
