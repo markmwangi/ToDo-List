@@ -1,41 +1,72 @@
-body, html{
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
-.wrapper{
-    width: 50%;
-    margin: 0 auto;
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
 }
-.container{
-    background: navajowhite;
-    padding: 5px;
-    border: 1px solid rgba(255, 240, 200);
-    border-radius: 6px;
-    margin: 20px auto 0;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-.container h3{
-    text-decoration: underline;
+.container {
+  background: navajowhite;
+  padding: 5px;
+  border: 1px solid rgba(255, 240, 200);
+  border-radius: 6px;
+  margin: 20px auto 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
-.items{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    display: block;
-    border-bottom: #42464b solid 1px;
+.container h3 {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: underline;
 }
 
-#add-btn{
-    background: rgba(189 , 173, 255, .25);
-    /* border: 1px solid rgba(189, 190, 255, .5); */
-    font-size: 15px;
+.items {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  display: block;
+  border-bottom: #42464b solid 1px;
 }
 
-input:focus button:focus{
-    outline: none;
+#input-span {
+  margin: 0 auto;
+  float: left;
+}
+
+#add-btn {
+  background: rgba(230, 255, 200, 1);
+  font-size: 15px;
+  float: left;
+  border-radius: 5px;
+  border-color: white;
+}
+
+#clear-btn {
+  background: rgba(230, 255, 200, 1);
+  font-size: 15px;
+  float: left;
+  width: 33%;
+  border-radius: 5px;
+  border-color: white;
+}
+
+#list-item {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  background-color: rgba(230, 255, 200, 0.75);
+  border-radius: 5px;
+  border-color: white;
+}
+.symbol {
+  margin: 2px;
+  padding: 2px;
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    width: 40%;
+  }
 }
