@@ -29,14 +29,14 @@ $(document).ready(function() {
 
   //Removes checked off items from list
   $("#clear-btn").click(function() {
-    console.log("working?");
     $(".check:checked").each(function() {
-      item = $(this)
-        .parent()
-        .get(0);
-      $(item).hide(300, function() {
-        $(item).remove();
-      });
+      item = $(this).parent();
+      $(item)
+        .hide("puff")
+        .delay(100)
+        .queue(function() {
+          $(this).remove();
+        });
     });
   });
 
@@ -44,10 +44,9 @@ $(document).ready(function() {
   $(".container").on("click", ".check", function(event) {
     parent = $(this).parent();
     if (this.checked) {
-      console.log(parent);
-      parent.css("text-decoration", "line-through");
+      parent.css({ textDecoration: "line-through", color: "#999" });
     } else {
-      parent.css("text-decoration", "none");
+      parent.css({ textDecoration: "none", color: "whitesmoke" });
     }
   });
 });

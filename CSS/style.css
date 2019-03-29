@@ -1,33 +1,40 @@
-body,
 html {
   margin: 0;
   padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ddddff, #ffffaa);
 }
 .wrapper {
   width: 100%;
   margin: 0 auto;
 }
 .container {
-  background: navajowhite;
+  background: #545454;
   padding: 5px;
-  border: 1px solid rgba(255, 240, 200);
+  border: 1px solid gray;
   border-radius: 6px;
   margin: 20px auto 0;
   width: 50%;
   display: flex;
   flex-direction: column;
+  box-shadow: 5px 5px 20px #555;
 }
 
 .container h3 {
   font-family: "Courier New", Courier, monospace;
   text-decoration: underline;
+  color: #ffe;
 }
 
 .items {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace, Courier;
   font-size: 17px;
+  color: whitesmoke;
   display: block;
-  border-bottom: #42464b solid 1px;
+  border-bottom: #999 solid 1px;
 }
 
 #input-span {
@@ -36,30 +43,43 @@ html {
 }
 
 #add-btn {
-  background: rgba(230, 255, 200, 1);
+  margin: 0 2px 0 2px;
   font-size: 15px;
   float: left;
-  border-radius: 5px;
-  border-color: white;
+  background-color: white;
+  border: 2px solid #aaa;
+  border-radius: 50%;
 }
 
 #clear-btn {
-  background: rgba(230, 255, 200, 1);
   font-size: 15px;
   float: left;
   width: 33%;
+  background-color: white;
   border-radius: 5px;
-  border-color: white;
+  border-color: 2px solid #aaa;
 }
 
 #list-item {
   width: 50%;
   float: left;
   overflow: hidden;
-  background-color: rgba(230, 255, 200, 0.75);
   border-radius: 5px;
   border-color: white;
 }
+
+#add-btn:focus,
+#list-item:focus,
+#clear-btn:focus {
+  outline: none;
+}
+
+#add-btn:hover,
+#list-item:hover,
+#clear-btn:hover {
+  background-color: #eee;
+}
+
 .symbol {
   margin: 2px;
   padding: 2px;
